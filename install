@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# install --- install the iterm2 preferences custom folder and plist
+
+# Mike Barker <mike@thebarkers.com>
+# December 18th, 2016
+
+ITERM2_DST_DIR=${HOME}/.iterm2
+ITERM2_SRC_DIR=${HOME}/src/dot-iterm2
+
+mkdir -p ${ITERM2_DST_DIR}
+
+if [ -d ${ITERM_DST_DIR} ]; then
+    mv ${ITERM_DST_DIR} ${ITERM2_DST_DIR}.bak
+fi
+
+ln -s ${ITERM2_SRC_DIR} ${ITERM2_DST_DIR}  
