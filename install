@@ -6,11 +6,12 @@
 
 ITERM2_DST_DIR=${HOME}/.iterm2
 ITERM2_SRC_DIR=${HOME}/src/dot-iterm2
+ITERM2_PREFERENCES=com.googlecode.iterm2.plist
 
 mkdir -p ${ITERM2_DST_DIR}
 
-if [ -d ${ITERM_DST_DIR} ]; then
+if [ -f "${ITERM_DST_DIR}/${ITERM2_PREFERENCES}" ]; then
     mv ${ITERM_DST_DIR} ${ITERM2_DST_DIR}.bak
 fi
 
-ln -s ${ITERM2_SRC_DIR} ${ITERM2_DST_DIR}  
+ln -s ${ITERM2_SRC_DIR}/${ITERM2_PREFERENCES} ${ITERM2_DST_DIR}/${ITERM2_PREFERENCES}
