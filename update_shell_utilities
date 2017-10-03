@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# upgrade_shell_integration --- download the latest shell integration script
+
+# Mike Barker <mike@thebarkers.com>
+# October 3rd 2017
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+DST_DIR=${HOME}/.iterm2
+ITERM2_URL=https://iterm2.com
+
+# Define utility programs to be installed
+UTILS[0]="imgcat"
+UTILS_URL[0]="https://iterm2.com/utilities/imgcat"
+UTILS[1]="imgls"
+UTILS_URL[1]="https://iterm2.com/utilities/imgls"
+UTILS[2]="it2dl"
+UTILS_URL[2]="https://iterm2.com/utilities/it2dl"
+UTILS[3]="divider"
+UTILS_URL[3]="https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/divider"
+
+echo
+echo "Download iterm2 shell utilities"
+for idx in ${!UTILS[*]}; do
+	file=${UTILS[$idx]}
+	url=${UTILS_URL[$idx]}
+	echo
+	echo "... downloading file: $url"
+	curl -L ${url} -o ${DST_DIR}/$file
+	chmod +x ${DST_DIR}/$file
+done
