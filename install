@@ -4,26 +4,47 @@
 # Mike Barker <mike@thebarkers.com>
 # December 18th, 2016
 
-ITERM2_DST_DIR=${HOME}/.iterm2
-ITERM2_SRC_DIR=${HOME}/src/dot-iterm2
-ITERM2_PREFERENCES=com.googlecode.iterm2.plist
-ITERM2_IMGCAT_URL=https://iterm2.com/imgcat
-ITERM2_IT2DL_URL=https://iterm2.com/it2dl
+DIR="$(cd "$(dirname "$0")" && pwd)"
 
-mkdir -p ${ITERM2_DST_DIR}
+DST_DIR=${HOME}/.iterm2
+SRC_DIR=${DIR}
+ITERM2_PLIST=com.googlecode.iterm2.plist
+ITERM2_URL=https://iterm2.com
 
-if [ -f "${ITERM_DST_DIR}/${ITERM2_PREFERENCES}" ] && \
-    [ ! -L "${ITERM_DST_DIR}/${ITERM2_PREFERENCES}" ]; then
-    mv ${ITERM_DST_DIR} ${ITERM2_DST_DIR}.bak
+# Define utility programs to be installed
+UTILS[0]="imgcat"
+UTILS_URL[0]="https://iterm2.com/utilities/imgcat"
+UTILS[1]="imgls"
+UTILS_URL[1]="https://iterm2.com/utilities/imgls"
+UTILS[2]="it2dl"
+UTILS_URL[2]="https://iterm2.com/utilities/it2dl"
+UTILS[3]="divider"
+UTILS_URL[3]="https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/divider"
+
+mkdir -p ${DST_DIR}
+
+if [ -f "${DST_DIR}/${ITERM2_PLIST}" ] && \
+    [ ! -L "${DST_DIR}/${ITERM2_PLIST}" ]; then
+    mv ${DST_DIR}/${ITERM2_PLIST} ${DST_DIR}/${ITERM2_PLIST}.bak
 fi
 
-ln -fs ${ITERM2_SRC_DIR}/${ITERM2_PREFERENCES} ${ITERM2_DST_DIR}/${ITERM2_PREFERENCES}
+echo
+echo "Link the config file"
+ln -fsnv ${SRC_DIR}/${ITERM2_PLIST} ${DST_DIR}/${ITERM2_PLIST}
 
-curl -L https://iterm2.com/misc/$(basename $SHELL)_startup.in \
-    -o ${HOME}/.iterm2/iterm2_shell_integration.$(basename $SHELL)
+echo
+echo "Download iterm2 shell integration script"
+curl -L ${ITERM2_URL}/misc/$(basename $SHELL)_startup.in \
+    -o ${DST_DIR}/iterm2_shell_integration.$(basename $SHELL)
 
-curl -L ${ITERM2_IMGCAT_URL} -o ${HOME}/.iterm2/imgcat
-chmod +x ${HOME}/.iterm2/imgcat
+echo
+echo "Download utility programs"
+for idx in ${!UTILS[*]}; do
+	file=${UTILS[$idx]}
+	url=${UTILS_URL[$idx]}
+	echo
+	echo "... downloading file: $url"
+	curl -L ${url} -o ${DST_DIR}/$file
+	chmod +x ${DST_DIR}/$file
+done
 
-curl -L ${ITERM2_IT2DL_URL} -o ${HOME}/.iterm2/it2dl
-chmod +x ${HOME}/.iterm2/it2dl
