@@ -14,6 +14,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -4260,7 +4262,7 @@
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
-	<false/>
+	<true/>
 	<key>HighlightTabLabels</key>
 	<true/>
 	<key>HotKeyBookmark</key>
@@ -4268,11 +4270,13 @@
 	<key>HotKeyTogglesWindow</key>
 	<true/>
 	<key>Hotkey</key>
-	<true/>
+	<false/>
 	<key>HotkeyChar</key>
-	<integer>104</integer>
+	<integer>0</integer>
 	<key>HotkeyCode</key>
-	<integer>4</integer>
+	<integer>0</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>786721</integer>
 	<key>IRMemory</key>
@@ -4289,10 +4293,8 @@
 	<false/>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
-	<key>NSFontPanelSizeSliderParams</key>
-	<string>2 0 100</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.iterm2</string>
+	<string>~/CloudStation/Apps/iTerm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -4310,7 +4312,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAczAAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAc7AAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -4332,23 +4334,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>234 291 673 376 0 0 1680 1027 </string>
+	<string>328 61 689 342 0 0 1366 745 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 568 606 456 0 0 1680 1027 </string>
-	<key>NSWindow Frame ProfilesPanel</key>
-	<string>26 645 735 382 0 0 1680 1027 </string>
+	<string>269 279 606 456 0 0 1366 745 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>502 312 700 610 0 0 1680 1027 </string>
+	<string>385 264 620 392 0 0 1366 745 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 76 599 519 0 0 1680 1027 </string>
+	<string>269 203 618 519 0 0 1366 768 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>143 330 770 381 0 0 1680 1027 </string>
-	<key>NSWindow Frame com.apple.typography_panel_Menlo-Regular</key>
-	<string>479 743 260 36 0 0 1680 1027 </string>
+	<string>195 202 796 473 0 0 1366 745 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>853 2 826 1024 0 0 1680 1027 </string>
+	<string>299 318 570 352 0 0 1366 745 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>26 577 650 449 0 0 1680 1027 </string>
+	<string>698 363 570 375 0 0 1366 745 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -5327,10 +5325,30 @@
 			</dict>
 			<key>Guid</key>
 			<string>C175C6AB-ECD8-4D52-A6C6-B70ACB147B29</string>
+			<key>Has Hotkey</key>
+			<true/>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>HotKey Characters</key>
+			<string>h</string>
+			<key>HotKey Characters Ignoring Modifiers</key>
+			<string>h</string>
+			<key>HotKey Key Code</key>
+			<integer>4</integer>
+			<key>HotKey Modifier Flags</key>
+			<integer>786721</integer>
+			<key>HotKey Window Animates</key>
+			<true/>
+			<key>HotKey Window AutoHides</key>
+			<true/>
+			<key>HotKey Window Dock Click Action</key>
+			<integer>0</integer>
+			<key>HotKey Window Floats</key>
+			<false/>
+			<key>HotKey Window Reopens On Activation</key>
+			<false/>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -17608,14 +17626,10 @@
 	<true/>
 	<key>NoSyncConfirmBeta</key>
 	<true/>
-	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>32CC6BA3-07B1-4C28-AD59-5A26166D40D7</string>
-	<key>NoSyncLastTipTime</key>
-	<real>477980745.14324099</real>
+	<string>83110F62-5470-464C-A4D4-E08BC4D67E16</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -17623,16 +17637,11 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>477980676.29422599</real>
+	<real>477984394.63848698</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>476993018.00014299</real>
+	<real>453270031.12052202</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>477964822.684955</real>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-		<string>000</string>
-	</array>
+	<real>477178531.27727199</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -17642,12 +17651,14 @@
 	<key>OpenNoWindowsAtStartup</key>
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
+	<false/>
+	<key>PerformDNSLookups</key>
 	<false/>
 	<key>PointerActions</key>
 	<dict>
@@ -17699,11 +17710,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=44</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=41</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-12-18T18:59:09Z</date>
+	<date>2017-10-03T13:50:44Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -17765,6 +17776,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.13</string>
+	<string>3.1.3.beta.1</string>
 </dict>
 </plist>
