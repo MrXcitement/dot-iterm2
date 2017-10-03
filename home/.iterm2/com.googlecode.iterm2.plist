@@ -5766,7 +5766,7 @@
 	<key>NSFontPanelSizeSliderParams</key>
 	<string>2 0 100</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/src/github/mbadolato/iTerm2-Color-Schemes/schemes</string>
+	<string>~/src/github/dot-iterm2/home/.iterm2/img</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -5814,7 +5814,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>502 312 700 610 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>613 414 606 469 0 0 1680 1050 </string>
+	<string>613 434 599 459 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>288 380 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame com.apple.typography_panel_Menlo-Regular</key>
