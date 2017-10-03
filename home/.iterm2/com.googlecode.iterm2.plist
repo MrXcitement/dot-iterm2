@@ -5820,9 +5820,9 @@
 	<key>NSWindow Frame com.apple.typography_panel_Menlo-Regular</key>
 	<string>479 743 260 36 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>356 214 570 425 0 0 1680 1050 </string>
+	<string>25 0 1655 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>853 576 650 448 0 0 1680 1050 </string>
+	<string>954 1792 570 402 -97 1050 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>-585 -426 650 448 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
