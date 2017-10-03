@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# upgrade_shell_integration --- download the latest shell integration script
+
+# Mike Barker <mike@thebarkers.com>
+# October 3rd 2017
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+DST_DIR=${HOME}/.iterm2
+ITERM2_URL=https://iterm2.com
+
+echo
+echo "Download iterm2 shell integration script"
+curl -L ${ITERM2_URL}/misc/$(basename $SHELL)_startup.in \
+    -o ${DST_DIR}/iterm2_shell_integration.$(basename $SHELL)
